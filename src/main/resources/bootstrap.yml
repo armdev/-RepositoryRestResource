@@ -1,0 +1,34 @@
+management:
+  security:  
+   enabled: false      
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+  endpoints:
+    jmx:
+      exposure:
+       include: '*'
+    web:
+     exposure:
+      include: '*'
+      base-path: /actuator
+    cors:
+      allowed-origins: 'true'
+      enabled-by-default: 'false'
+    
+server:
+    port: 2018
+    
+spring:
+  application:
+    name: xserver
+    profiles:
+    active:
+      default
+
+  data:
+    rest:
+      base-path: /api/v2 
+    mongodb:        
+      uri: ${MONGO_URI:mongodb://localhost:27017/socnet}
