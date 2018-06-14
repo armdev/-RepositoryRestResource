@@ -19,12 +19,15 @@ JSON
 
 For REST requests you can use 
 
+
 https://httpie.org/#installation
+
 https://github.com/clue/docker-httpie
 
+#Example Request and Response
 http POST http://localhost:2018/api/v2/users firstname=John lastname=Boot email=spring.boot@gmail.com password=spboot2018
 
-#Example Request and Response
+
 
 http POST http://192.168.99.1:2018/api/v2/users firstname=John lastname=Boot email=spring.boot@gmail.com password=spboot2018
 HTTP/1.1 201
@@ -52,7 +55,7 @@ Transfer-Encoding: chunked
 
 http GET http://192.168.99.1:2018/api/v2/users
 
-Available API for One Repository:
+#Available API for One Repository:
 
 2018-06-15 00:24:27.119  INFO [xserver,,,] 10048 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/api/v2/{repository}/{id}/{property}/{propertyId}],methods=[GET],produces=[application/hal+json || application/json]}" onto public org.springframework.http.ResponseEntity<org.springframework.hateoas.ResourceSupport> org.springframework.data.rest.webmvc.RepositoryPropertyReferenceController.followPropertyReference(org.springframework.data.rest.webmvc.RootResourceInformation,java.io.Serializable,java.lang.String,java.lang.String,org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler) throws java.lang.Exception
 
